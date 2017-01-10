@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="界面">
+        <Preference
+            android:key="change_icons"
+            android:title="更换天气图标"/>
+        <Preference
+            android:key="change_update_time"
+            android:title="自动刷新频率"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="系统">
+        <SwitchPreference
+            android:key="refresh"
+            android:checked="false"
+            android:title="自动刷新"
+            android:contentDescription="进入应用时刷新加载最近信息"/>
+        <SwitchPreference
+            android:key="wifi_model"
+            android:checked="true"
+            android:title="流量状态下提醒"/>
+        <SwitchPreference
+            android:key="wifi_model"
+            android:checked="true"
+            android:title="双击退出应用"/>
+
+        <SwitchPreference
+            android:key="night_model"
+            android:checked="false"
+            android:title="夜间模式"/>
+        <Preference
+            android:key="clear_cache"
+            android:title="清除缓存"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="">
+        <Preference
+            android:key="about"
+            android:title="关于"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
