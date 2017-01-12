@@ -247,7 +247,7 @@ public class PictureActivity extends ToolbarActivity implements View.OnLongClick
               @Override
               public void onNext(Uri uri) {
                   File picFile = new File(Environment.getExternalStorageDirectory(),"Ball_Gril");
-                  String msg = String.format(getResources().getString(R.string.picture_had_save_to),picFile.getAbsolutePath());
+                  String msg = String.format(getResources().getString(R.string.picture_saved),picFile.getAbsolutePath());
                   showToast(msg);
               }
           })

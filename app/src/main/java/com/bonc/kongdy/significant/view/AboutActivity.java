@@ -4,13 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.bonc.kongdy.basketball.R;
-import com.bonc.kongdy.significant.db.LiteOrmUtils;
-import com.bonc.kongdy.significant.model.StoryBean;
 import com.bonc.kongdy.significant.view.base.ToolbarActivity;
-import com.litesuits.orm.LiteOrm;
-import com.orhanobut.logger.Logger;
-
-import java.util.List;
+import com.bonc.kongdy.significant.view.fragment.AboutFragment;
 
 import butterknife.ButterKnife;
 
@@ -22,8 +17,17 @@ public class AboutActivity extends ToolbarActivity {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
         context = this;
+
+        setTitle(getString(R.string.about));
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
+
         initView();
         loadData();
+    }
+
+    @Override
+    public boolean canBack() {
+        return true;
     }
 
     @Override
@@ -38,11 +42,6 @@ public class AboutActivity extends ToolbarActivity {
 
     @Override
     protected void initView() {
-        LiteOrm liteOrm = LiteOrmUtils.getCascadeInstance();
-
-        List<StoryBean> list =  liteOrm.query(StoryBean.class);
-        Logger.d(list.size()+"  " +list.toString());
-
     }
 
     @Override
