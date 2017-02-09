@@ -32,6 +32,8 @@
     <string name="nbalive_url">http://espnzhibo.com/espn?from=singlemessage&amp;isappinstalled=0
     </string>
 
+    <string name="email">kongdy725@gmail.com</string>
+    <string name="my_github">https://github.com/learnYU</string>
     <string name="url_login_github">https://github.com/login</string>
     <string name="url_github_trending">https://github.com/trending</string>
     <string name="url_gank_io">http://gank.io/</string>

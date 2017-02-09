@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="界面">
+    <PreferenceCategory android:title="显示">
         <SwitchPreference
             android:key="night_model"
             android:checked="false"
+            android:visibility="gone"
             android:title="夜间模式"/>
 
-        <Preference
+        <SwitchPreference
             android:key="change_update_time"
-            android:title="自动刷新频率"/>
+            android:checked="true"
+            android:summary="使用该应用期间保持高亮，禁止锁屏"
+            android:title="高亮显示"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="系统">
