@@ -1,7 +1,7 @@
 package com.bonc.kongdy.significant.view;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
 import android.text.TextUtils;
@@ -74,12 +74,13 @@ public class VideoInfoActivity extends ToolbarActivity {
 
         textSwitcher.setVisibility(View.VISIBLE);
         textSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
-            @SuppressLint("NewApi")
             @Override
             public View makeView() {
                 final TextView textView = new TextView(context);
                 textView.setScrollBarStyle(View.SCROLLBARS_INSIDE_INSET);
-                textView.setTextAppearance(R.style.WebTitle);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    textView.setTextAppearance(R.style.WebTitle);
+                }
                 textView.setEllipsize(TextUtils.TruncateAt.MARQUEE);
                 //                textView.setGravity();
                 textView.setSingleLine(true);
