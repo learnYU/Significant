@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.bonc.kongdy.basketball.R;
 import com.bonc.kongdy.significant.db.LiteOrmUtils;
+import com.bonc.kongdy.significant.utlis.CrashHandler;
 import com.bonc.kongdy.significant.utlis.Setting;
 import com.litesuits.orm.db.DataBaseConfig;
 import com.orhanobut.logger.Logger;
@@ -21,6 +22,8 @@ public class App extends Application{
     public void onCreate() {
         super.onCreate();
         appContext = getApplicationContext();
+
+        CrashHandler.getInstance().init(getApplicationContext());
 
         DataBaseConfig config = new DataBaseConfig(appContext);
         config.debugged = true; // open the log

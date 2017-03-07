@@ -17,7 +17,7 @@ public class StoryBean implements Serializable {
     @Column("ga_prefix")
     private String ga_prefix;
     
-    private List<String> images = new ArrayList<>();
+    private ArrayList<String> images = new ArrayList<>();
     @Column("type")
     private String type;
     @Column("id")
@@ -43,7 +43,7 @@ public class StoryBean implements Serializable {
         return images;
     }
 
-    public void setImages(List<String> images) {
+    public void setImages(ArrayList<String> images) {
         this.images = images;
     }
 
